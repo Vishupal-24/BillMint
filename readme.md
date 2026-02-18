@@ -1,3 +1,2 @@
-Green Receipt is built on a simple idea: help people understand their everyday spending better and turn small financial decisions into smarter long-term habits.
-It encourages mindful purchasing, reduces unnecessary waste, and makes personal money management feel clear, practical, and sustainable.
-
+This project is a smart digital receipt and payment platform that replaces paper bills with a unified, mobile‑first experience. Customers can scan a QR to instantly receive receipts, track expenses, view history in a calendar, manage pending dues, and get reminders for recurring bills — all in one place.
+Merchants can generate receipts, manage pending payments (khata), send payment reminders, and receive UPI payments directly into their own accounts. Once a customer pays, the receipt is automatically marked as paid and both sides are notified. The goal is to simplify everyday transactions, reduce paper waste, and create a seamless bridge between billing, payments, and expense tracking.
