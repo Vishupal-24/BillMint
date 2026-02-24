@@ -1,2 +1,6 @@
 # GitShift personal account configuration
 github-accounts.json
+.env
+backend/.env
+
+frontend/.env

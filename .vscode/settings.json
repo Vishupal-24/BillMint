@@ -1,0 +1,4 @@
+{
+    "git.requireGitUserConfig": false,
+    "editor.suggest.showUsers": true
+}
