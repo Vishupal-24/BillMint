@@ -1,42 +1,63 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import CustomerLogin from './pages/CustomerLogin';
+import MerchantLogin from './pages/MerchantLogin';
+import CustomerSignup from './pages/CustomerSignup';
+import MerchantSignup from './pages/MerchantSignup';
+import CustomerVerify from './pages/CustomerVerify';
+import MerchantVerify from './pages/MerchantVerify';
+import CustomerDashboard from './pages/CustomerDashboard';
+import MerchantDashboard from './pages/MerchantDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* 1. The Landing Page */}
+        <Route path="/" element={<Home />} />
+
+        {/* 2. Customer Routes */}
+        <Route path="/customer-signup" element={<CustomerSignup />} />
+        <Route path="/verify-customer" element={<CustomerVerify />} />
+        <Route path="/customer-login" element={<CustomerLogin />} />
+
+        
+        <Route
+          path="/customer-dashboard"
+          element={
+            <ProtectedRoute role="customer">
+              <CustomerDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+
+        {/* 3. Merchant Routes (Keep commented for now) */}
+        <Route path="/merchant-signup" element={<MerchantSignup />} />
+        <Route path="/verify-merchant" element={<MerchantVerify />} />
+        <Route path="/merchant-login" element={<MerchantLogin />} />
+
+        <Route
+          path="/merchant-dashboard"
+          element={
+            <ProtectedRoute role="merchant">
+              <MerchantDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* 4. 404 Fallback */}
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </Router>
+  );
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+export default App;
