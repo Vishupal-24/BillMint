@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Hero from '../components/home/Hero';
 import Benefits from '../components/home/Benefits';
@@ -8,6 +8,23 @@ import Footer from '../components/layout/Footer';
 // import Blob from '../components/common/Blob';
 
 const Home = () => {
+  // Force light mode on Home page
+  useEffect(() => {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.style.colorScheme = 'light';
+
+    return () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+      } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+      }
+    };
+  }, []);
+
   return (
     <div className="relative font-sans text-slate-900 antialiased overflow-x-hidden bg-white selection:bg-emerald-100 selection:text-emerald-600">
       
@@ -30,8 +47,8 @@ const Home = () => {
         <Navbar />
         <Hero />
         <Benefits />
-        <Features />
-        <CTA />
+        {/* <Features /> */}
+        {/* <CTA /> */}
         <Footer />
       </div>
 

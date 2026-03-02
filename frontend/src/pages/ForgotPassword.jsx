@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { forgotPassword } from '../services/api.js';
+import useForceLightMode from "../hooks/useForceLightMode";
 
 const ForgotPassword = () => {
+  useForceLightMode();
   const navigate = useNavigate();
   // We check if we came from Merchant or Customer login to know which role to reset
   const location = useLocation();
