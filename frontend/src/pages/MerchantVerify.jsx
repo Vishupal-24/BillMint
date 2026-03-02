@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import { requestOtp, verifyOtpCode } from '../services/api.js';
+import useForceLightMode from "../hooks/useForceLightMode";
 
 const MerchantVerify = () => {
+  useForceLightMode();
   const navigate = useNavigate();
   const location = useLocation();
   const email = location.state?.email || "business email";
@@ -43,7 +46,7 @@ const MerchantVerify = () => {
 
     try {
       await verifyOtpCode({ email, code, role: 'merchant' });
-      alert("Verification Successful! Please log in.");
+      toast.success("Verification Successful! Please log in.");
       navigate('/merchant-login');
     } catch (error) {
       const message = error.response?.data?.message || "Invalid Code. Try again.";
