@@ -2,19 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 1. RESTORE SMOOTH SCROLLING */
+/* ============================================
+   THEME TRANSITION - Smooth dark mode switch
+   ============================================ */
 html {
   scroll-behavior: smooth;
 }
 
+/* Global theme transition for smooth switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, 
+              border-color 0.3s ease, 
+              color 0.15s ease,
+              box-shadow 0.3s ease;
+}
+
+/* ============================================
+   DARK MODE BASE STYLES
+   ============================================ */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border-color: #e2e8f0;
+  --accent: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.2);
+}
+
+.dark {
+  --bg-primary: #09090b;
+  --bg-secondary: #0c0c0e;
+  --bg-card: #141416;
+  --bg-surface: #1a1a1e;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border-color: #27272a;
+  --border-subtle: #1f1f23;
+  --accent: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.25);
+}
+
+/* Dark mode body styles */
+.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   GLASS MORPHISM - Light & Dark
+   ============================================ */
 @layer utilities {
-  /* OPTIMIZATION: 
-     1. Reduced blur from lg/xl to md (less math for GPU).
-     2. Increased opacity (0.7 -> 0.9) so the browser doesn't have to blend as much background.
-  */
   .glass {
     @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-lg;
-    transform: translate3d(0, 0, 0); /* Force Hardware Acceleration */
+    transform: translate3d(0, 0, 0);
+  }
+
+  .dark .glass {
+    @apply bg-[#141416]/90 backdrop-blur-xl border-[#27272a]/80;
+  }
+
+  /* Premium dark mode card effect */
+  .dark-card {
+    @apply bg-gradient-to-br from-[#141416] to-[#0c0c0e]
+           backdrop-blur-xl border border-[#27272a]
+           shadow-xl shadow-black/40;
+  }
+
+  /* Glow effects for dark mode */
+  .dark-glow-emerald {
+    box-shadow: 0 0 60px rgba(16, 185, 129, 0.12),
+                0 4px 30px rgba(16, 185, 129, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .dark-glow-purple {
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.12),
+                0 4px 30px rgba(139, 92, 246, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .dark-glow-blue {
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.12),
+                0 4px 30px rgba(59, 130, 246, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Subtle gradient border effect for dark mode */
+  .dark-border-gradient {
+    position: relative;
+  }
+  
+  .dark-border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
   /* Disable animations on mobile for better performance */
@@ -25,7 +118,9 @@ html {
   }
 }
 
-/* 2. OPTIMIZED KEYFRAMES */
+/* ============================================
+   OPTIMIZED KEYFRAMES
+   ============================================ */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(3deg); }
@@ -36,14 +131,159 @@ html {
   50% { background-position: 100% 50%; }
 }
 
-/* 3. OPTIMIZE SCROLLBAR (Optional but looks premium) */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.5); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-pop-in {
+  animation: popIn 0.3s ease-out;
+}
+
+/* ============================================
+   SCROLLBAR STYLING - Light & Dark
+   ============================================ */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
   border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #52525b;
+}
+
+/* ============================================
+   DARK MODE SPECIFIC ENHANCEMENTS
+   ============================================ */
+
+/* Gradient text in dark mode */
+.dark .gradient-text {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Input fields dark mode - Premium styling */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #141416;
+  border-color: #27272a;
+  color: #fafafa;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #10b981;
+  background-color: #1a1a1e;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15),
+              0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #52525b;
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  background-color: rgba(16, 185, 129, 0.3);
+  color: #fafafa;
+}
+
+/* Ambient background effect for dark mode - More subtle */
+.dark-ambient {
+  position: relative;
+}
+
+.dark-ambient::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200vmax;
+  height: 200vmax;
+  background: radial-gradient(circle at 25% 15%, rgba(16, 185, 129, 0.06) 0%, transparent 40%),
+              radial-gradient(circle at 75% 85%, rgba(139, 92, 246, 0.04) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Dark mode buttons - Premium hover states */
+.dark .btn-primary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.dark .btn-primary:hover {
+  box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Dark mode card hover effects */
+.dark .card-hover:hover {
+  background-color: #1a1a1e;
+  border-color: #3f3f46;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================
+   SAFE AREA HANDLING
+   ============================================ */
+.safe-area-bottom { 
+  padding-bottom: env(safe-area-inset-bottom, 0); 
+}
+
+.h-safe-area-inset-bottom { 
+  height: env(safe-area-inset-bottom, 0); 
+}
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
 }
