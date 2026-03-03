@@ -1,0 +1,374 @@
+{
+  "common": {
+    "appName": "ग्रीनरिसीप्ट",
+    "tagline": "कागज़रहित बनें",
+    "loading": "लोड हो रहा है...",
+    "saving": "सहेजा जा रहा है...",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "confirm": "पुष्टि करें",
+    "close": "बंद करें",
+    "back": "वापस",
+    "next": "आगे",
+    "search": "खोजें",
+    "filter": "फ़िल्टर",
+    "all": "सभी",
+    "yes": "हां",
+    "no": "नहीं",
+    "ok": "ठीक है",
+    "error": "त्रुटि",
+    "success": "सफल",
+    "warning": "चेतावनी",
+    "info": "जानकारी",
+    "refresh": "रिफ्रेश",
+    "logout": "लॉग आउट",
+    "version": "संस्करण",
+    "currency": "₹",
+    "receipts": "रसीदें",
+    "receipt": "रसीद",
+    "total": "कुल",
+    "viewAll": "सभी देखें"
+  },
+  
+  "nav": {
+    "home": "होम",
+    "receipts": "रसीदें",
+    "history": "इतिहास",
+    "insights": "विश्लेषण",
+    "alerts": "अलर्ट",
+    "profile": "प्रोफ़ाइल",
+    "calendar": "कैलेंडर",
+    "overview": "ओवरव्यू",
+    "billing": "बिल बनाएं",
+    "bill": "बिल",
+    "items": "आइटम",
+    "salesInsights": "बिक्री विश्लेषण",
+    "mainMenu": "मुख्य मेन्यू",
+    "newTransaction": "नया लेनदेन",
+    "salesHistory": "बिक्री इतिहास",
+    "analytics": "एनालिटिक्स",
+    "inventory": "इन्वेंटरी",
+    "shopSettings": "दुकान सेटिंग्स"
+  },
+  
+  "dashboard": {
+    "title": "डैशबोर्ड",
+    "subtitle": "आपका खर्च एक नज़र में",
+    "thisMonth": "इस महीने",
+    "thisWeek": "इस हफ्ते",
+    "lastMonth": "पिछले महीने",
+    "thisYear": "इस साल",
+    "receiptsThisMonth": "इस महीने {{count}} रसीदें",
+    "upi": "UPI",
+    "cash": "नकद",
+    "receipts": "रसीदें",
+    "thisMonthLabel": "इस महीने",
+    "avgPerDay": "औसत/दिन",
+    "dailyAverage": "दैनिक औसत",
+    "lastWeekLabel": "पिछला हफ्ता",
+    "receiptsCount": "{{count}} रसीदें",
+    "projected": "अनुमानित",
+    "endOfMonth": "महीने के अंत तक",
+    "recentActivity": "हाल की गतिविधि"
+  },
+  
+  "receipts": {
+    "title": "सभी रसीदें",
+    "subtitle": "{{count}} रसीदें • {{currency}}{{total}} कुल",
+    "searchPlaceholder": "दुकान के नाम से खोजें...",
+    "noReceipts": "कोई रसीद नहीं",
+    "noReceiptsYet": "अभी कोई रसीद नहीं",
+    "noReceiptsFound": "कोई रसीद नहीं मिली",
+    "scanOrUpload": "शुरू करने के लिए QR स्कैन करें या अपलोड करें",
+    "adjustFilters": "अपने फ़िल्टर या खोज को समायोजित करें",
+    "clearFilters": "सभी फ़िल्टर हटाएं",
+    "allCaughtUp": "सब अपडेट हो गया!",
+    "digital": "डिजिटल",
+    "uploaded": "अपलोड की गई",
+    "qr": "QR",
+    "upload": "अपलोड",
+    "sortBy": "क्रम से",
+    "sortByDate": "तारीख",
+    "sortByAmount": "राशि",
+    "latestFirst": "नवीनतम पहले",
+    "highestAmount": "सबसे अधिक राशि",
+    "paymentMethod": "भुगतान विधि",
+    "card": "कार्ड",
+    "deleteConfirm": "यह रसीद हटाएं?",
+    "uploadSuccess": "रसीद सफलतापूर्वक अपलोड हुई!",
+    "uploadFailed": "रसीद अपलोड करने में विफल"
+  },
+  
+  "ecoImpact": {
+    "title": "पर्यावरण प्रभाव",
+    "paperSaved": "आपने इस महीने {{amount}} किलो कागज़ बचाया! 🌱",
+    "thisMonth": "इस महीने",
+    "waterSaved": "पानी बचाया",
+    "allTime": "कुल: {{receipts}} रसीदें • {{paper}} किलो कागज़ बचाया"
+  },
+  
+  "profile": {
+    "title": "मेरी प्रोफ़ाइल",
+    "memberSince": "{{date}} से सदस्य",
+    "yourName": "आपका नाम",
+    "verified": "सत्यापित",
+    "pending": "लंबित",
+    "since": "{{date}} से",
+    
+    "tabs": {
+      "personal": "व्यक्तिगत",
+      "address": "पता",
+      "security": "सुरक्षा"
+    },
+    
+    "stats": {
+      "receipts": "रसीदें",
+      "totalSpent": "कुल खर्च",
+      "avgPerReceipt": "औसत/रसीद"
+    },
+    
+    "personal": {
+      "title": "व्यक्तिगत जानकारी",
+      "fullName": "पूरा नाम",
+      "fullNamePlaceholder": "अपना पूरा नाम दर्ज करें",
+      "email": "ईमेल पता",
+      "emailPlaceholder": "you@example.com",
+      "phone": "फ़ोन नंबर",
+      "phonePlaceholder": "+91 98765 43210"
+    },
+    
+    "address": {
+      "title": "पता विवरण",
+      "line1": "पता लाइन 1",
+      "line1Placeholder": "सड़क का पता, अपार्टमेंट, आदि",
+      "line2": "पता लाइन 2",
+      "line2Placeholder": "लैंडमार्क, बिल्डिंग का नाम (वैकल्पिक)",
+      "city": "शहर",
+      "cityPlaceholder": "मुंबई",
+      "state": "राज्य",
+      "statePlaceholder": "महाराष्ट्र",
+      "postalCode": "पिन कोड",
+      "postalCodePlaceholder": "400001",
+      "country": "देश",
+      "countryPlaceholder": "भारत"
+    },
+    
+    "security": {
+      "title": "सुरक्षा सेटिंग्स",
+      "changePassword": "पासवर्ड बदलें",
+      "changePasswordDesc": "अपना खाता पासवर्ड अपडेट करें",
+      "emailVerified": "ईमेल सत्यापित",
+      "currentPassword": "वर्तमान पासवर्ड",
+      "currentPasswordPlaceholder": "वर्तमान पासवर्ड दर्ज करें",
+      "newPassword": "नया पासवर्ड",
+      "newPasswordPlaceholder": "न्यूनतम 6 अक्षर",
+      "confirmPassword": "नया पासवर्ड पुष्टि करें",
+      "confirmPasswordPlaceholder": "नया पासवर्ड पुष्टि करें",
+      "updatePassword": "पासवर्ड अपडेट करें",
+      "changing": "बदल रहा है..."
+    },
+    
+    "dangerZone": {
+      "title": "खतरे का क्षेत्र",
+      "deleteAccount": "खाता हटाएं",
+      "deleteAccountDesc": "अपना खाता और डेटा स्थायी रूप से हटाएं",
+      "deleteWarning": "चेतावनी: यह क्रिया पूर्ववत नहीं की जा सकती। आपका सारा डेटा, रसीदें और खाता जानकारी स्थायी रूप से हटा दी जाएगी।",
+      "typeDelete": "पुष्टि के लिए \"DELETE\" टाइप करें",
+      "deleting": "हटाया जा रहा है...",
+      "deleteMyAccount": "मेरा खाता हटाएं"
+    },
+    
+    "appearance": {
+      "title": "प्रदर्शन",
+      "darkMode": "डार्क मोड",
+      "switchTheme": "लाइट और डार्क थीम के बीच स्विच करें"
+    },
+    
+    "language": {
+      "title": "भाषा",
+      "selectLanguage": "अपनी पसंदीदा भाषा चुनें",
+      "english": "English",
+      "hindi": "हिंदी"
+    },
+    
+    "saveButton": {
+      "saveChanges": "परिवर्तन सहेजें",
+      "noChanges": "कोई परिवर्तन नहीं",
+      "saving": "सहेजा जा रहा है..."
+    },
+    
+    "messages": {
+      "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट हुई!",
+      "updateFailed": "प्रोफ़ाइल अपडेट करने में विफल",
+      "loadFailed": "प्रोफ़ाइल लोड करने में असमर्थ",
+      "noChanges": "सहेजने के लिए कोई परिवर्तन नहीं",
+      "passwordChanged": "पासवर्ड सफलतापूर्वक बदला गया!",
+      "passwordChangeFailed": "पासवर्ड बदलने में विफल",
+      "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+      "passwordTooShort": "पासवर्ड कम से कम 6 अक्षरों का होना चाहिए",
+      "nameTooShort": "नाम कम से कम 2 अक्षरों का होना चाहिए",
+      "invalidEmail": "कृपया एक मान्य ईमेल दर्ज करें",
+      "phoneTooShort": "फ़ोन नंबर कम से कम 7 अंकों का होना चाहिए",
+      "deleteConfirm": "पुष्टि के लिए DELETE टाइप करें",
+      "deleteSuccess": "खाता सफलतापूर्वक हटाया गया",
+      "deleteFailed": "खाता हटाने में विफल",
+      "logoutConfirm": "क्या आप वाकई लॉग आउट करना चाहते हैं?"
+    }
+  },
+  
+  "notifications": {
+    "title": "स्मार्ट अलर्ट",
+    "subtitle": "वारंटी, बजट और अधिक पर नज़र रखें",
+    "markAllRead": "सभी पढ़े गए",
+    "noNotifications": "कोई सूचना नहीं",
+    "allCaughtUp": "सब अपडेट हो गया!",
+    
+    "filters": {
+      "all": "सभी",
+      "unread": "अपठित",
+      "warranty": "वारंटी",
+      "budget": "बजट",
+      "eco": "पर्यावरण"
+    },
+    
+    "types": {
+      "warranty": "वारंटी जल्द समाप्त हो रही है",
+      "budget": "मासिक बजट अलर्ट",
+      "eco": "हरित मील का पत्थर प्राप्त! 🌱",
+      "return": "रिटर्न विंडो बंद हो रही है",
+      "summary": "साप्ताहिक सारांश तैयार"
+    }
+  },
+  
+  "insights": {
+    "title": "विश्लेषण",
+    "subtitle": "आपका खर्च एनालिटिक्स",
+    "overview": "ओवरव्यू",
+    "totalSpent": "कुल खर्च",
+    "avgTransaction": "औसत लेनदेन",
+    "categories": "श्रेणियां",
+    "trends": "रुझान",
+    "topMerchants": "शीर्ष दुकानें",
+    "spendingByCategory": "श्रेणी के अनुसार खर्च",
+    "monthlyTrend": "मासिक रुझान",
+    "weeklySpending": "साप्ताहिक खर्च",
+    "noData": "अभी तक कोई खर्च डेटा नहीं",
+    "loading": "विश्लेषण लोड हो रहा है...",
+    "loadError": "विश्लेषण लोड करने में असमर्थ। कृपया पुनः प्रयास करें।",
+    "vsLastMonth": "पिछले महीने की तुलना में",
+    "dailySpending": "दैनिक खर्च",
+    "last14Days": "पिछले 14 दिन",
+    "last6Months": "पिछले 6 महीने",
+    "favoriteMerchants": "पसंदीदा दुकानें",
+    "spendingBreakdown": "खर्च विवरण",
+    "categoryDetails": "श्रेणी विवरण",
+    "upiPayments": "UPI भुगतान",
+    "cashPayments": "नकद भुगतान",
+    "transactions": "लेनदेन",
+    "topPurchases": "शीर्ष खरीदारी",
+    "smartSuggestions": "स्मार्ट सुझाव"
+  },
+  
+  "upload": {
+    "title": "रसीद अपलोड करें",
+    "dragDrop": "खींचें और छोड़ें या अपलोड करने के लिए क्लिक करें",
+    "imageTooLarge": "छवि बहुत बड़ी है (अधिकतम 2MB)",
+    "selectFile": "फ़ाइल चुनें",
+    "merchant": "दुकान का नाम",
+    "merchantPlaceholder": "जैसे स्टारबक्स, उबर",
+    "merchantShop": "दुकान / शॉप",
+    "amount": "राशि",
+    "amountPlaceholder": "0.00",
+    "totalAmount": "कुल राशि",
+    "date": "लेनदेन की तारीख",
+    "transactionDate": "लेनदेन की तारीख",
+    "includeInStats": "आंकड़ों में शामिल करें",
+    "includeInAnalytics": "एनालिटिक्स में शामिल करें",
+    "trackInCharts": "खर्च चार्ट में ट्रैक करें",
+    "uploading": "अपलोड हो रहा है...",
+    "uploadReceipt": "रसीद अपलोड करें",
+    "addReceipt": "रसीद जोड़ें",
+    "saveReceipt": "रसीद सहेजें",
+    "scanQr": "QR स्कैन करें",
+    "addDigitalReceipt": "डिजिटल रसीद जोड़ें",
+    "upload": "अपलोड",
+    "photoOrPdf": "फोटो या PDF",
+    "cancel": "रद्द करें"
+  },
+  
+  "calendar": {
+    "title": "रसीद इतिहास",
+    "subtitle": "तारीख के अनुसार रसीदें देखें",
+    "noReceipts": "इस तारीख को कोई रसीद नहीं",
+    "selectDate": "तारीख चुनें"
+  },
+  
+  "merchant": {
+    "goodMorning": "सुप्रभात",
+    "goodAfternoon": "नमस्ते",
+    "goodEvening": "शुभ संध्या",
+    "todayUpdate": "आज क्या हो रहा है, यहाँ देखें।",
+    "currentDate": "आज की तारीख",
+    "todaysSales": "आज की बिक्री",
+    "billsGenerated": "बिल बनाए गए",
+    "avgBillValue": "औसत बिल मूल्य",
+    "createNewBill": "नया बिल बनाएं",
+    "recentTransactions": "हाल के लेनदेन (आज)",
+    "noSalesYet": "आज अभी तक कोई बिक्री नहीं।",
+    "trendingItems": "लोकप्रिय आइटम",
+    "thisWeek": "इस हफ्ते",
+    "noSalesData": "अभी तक कोई बिक्री डेटा नहीं",
+    "walkInCustomer": "वॉक-इन ग्राहक",
+    "liveUpdates": "लाइव अपडेट",
+    "items": "आइटम",
+    "item": "आइटम",
+    "sold": "बेचा",
+    
+    "profile": {
+      "businessDetails": "व्यवसाय विवरण",
+      "contactLocation": "संपर्क जानकारी और स्थान",
+      "shopName": "दुकान का नाम",
+      "ownerName": "मालिक का नाम",
+      "phoneNumber": "फ़ोन नंबर",
+      "emailAddress": "ईमेल पता",
+      "shopAddress": "दुकान का पता",
+      "receiptBranding": "रसीद ब्रांडिंग",
+      "storeLogo": "स्टोर लोगो",
+      "uploadLogo": "लोगो अपलोड करें",
+      "logoSizeHint": "अधिकतम आकार: 2MB. फ़ॉर्मेट: JPG, PNG.",
+      "footerMessage": "फुटर संदेश",
+      "footerPlaceholder": "जैसे धन्यवाद, फिर आइएगा!",
+      "livePreview": "ग्राहक प्रीव्यू",
+      "yourShop": "आपकी दुकान",
+      "yourAddress": "आपका पता",
+      "thankYou": "धन्यवाद!",
+      "greenImpact": "आपका हरित प्रभाव",
+      "sinceJoining": "जुड़ने के बाद से, आपने बचाया:",
+      "paperSaved": "कागज़ बचाया",
+      "digitalBills": "डिजिटल बिल",
+      "logoutAccount": "खाता लॉगआउट करें",
+      "logoutConfirm": "क्या आप वाकई लॉगआउट करना चाहते हैं?",
+      "shopNameRequired": "दुकान का नाम आवश्यक है",
+      "imageTooLarge": "छवि बहुत बड़ी है (अधिकतम 2MB)",
+      "failedToSave": "सहेजने में विफल"
+    }
+  },
+  
+  "validation": {
+    "required": "यह फ़ील्ड आवश्यक है",
+    "invalidEmail": "कृपया एक मान्य ईमेल पता दर्ज करें",
+    "minLength": "कम से कम {{count}} अक्षर होने चाहिए",
+    "maxLength": "{{count}} अक्षरों से कम होना चाहिए"
+  },
+  
+  "time": {
+    "today": "आज",
+    "yesterday": "कल",
+    "daysAgo": "{{count}} दिन पहले",
+    "hoursAgo": "{{count}} घंटे पहले",
+    "minutesAgo": "{{count}} मिनट पहले",
+    "justNow": "अभी"
+  }
+}
